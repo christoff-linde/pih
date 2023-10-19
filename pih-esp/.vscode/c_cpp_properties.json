@@ -10,6 +10,9 @@
             "includePath": [
                 "/Users/christoff/source/repos/personal/pih/pih-esp/include",
                 "/Users/christoff/source/repos/personal/pih/pih-esp/src",
+                "/Users/christoff/source/repos/personal/pih/pih-esp/.pio/libdeps/firebeetle32/Adafruit DPS310",
+                "/Users/christoff/source/repos/personal/pih/pih-esp/.pio/libdeps/firebeetle32/Adafruit BusIO",
+                "/Users/christoff/.platformio/packages/framework-arduinoespressif32/libraries/Wire/src",
                 "/Users/christoff/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/newlib/platform_include",
                 "/Users/christoff/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/freertos/include",
                 "/Users/christoff/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/freertos/include/esp_additions/freertos",
@@ -200,6 +203,8 @@
                 "/Users/christoff/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/dio_qspi/include",
                 "/Users/christoff/.platformio/packages/framework-arduinoespressif32/cores/esp32",
                 "/Users/christoff/.platformio/packages/framework-arduinoespressif32/variants/firebeetle32",
+                "/Users/christoff/source/repos/personal/pih/pih-esp/.pio/libdeps/firebeetle32/Adafruit Unified Sensor",
+                "/Users/christoff/.platformio/packages/framework-arduinoespressif32/libraries/SPI/src",
                 "/Users/christoff/.platformio/packages/framework-arduinoespressif32/libraries/ArduinoOTA/src",
                 "/Users/christoff/.platformio/packages/framework-arduinoespressif32/libraries/AsyncUDP/src",
                 "/Users/christoff/.platformio/packages/framework-arduinoespressif32/libraries/BLE/src",
@@ -222,7 +227,6 @@
                 "/Users/christoff/.platformio/packages/framework-arduinoespressif32/libraries/RainMaker/src",
                 "/Users/christoff/.platformio/packages/framework-arduinoespressif32/libraries/SD/src",
                 "/Users/christoff/.platformio/packages/framework-arduinoespressif32/libraries/SD_MMC/src",
-                "/Users/christoff/.platformio/packages/framework-arduinoespressif32/libraries/SPI/src",
                 "/Users/christoff/.platformio/packages/framework-arduinoespressif32/libraries/SPIFFS/src",
                 "/Users/christoff/.platformio/packages/framework-arduinoespressif32/libraries/SimpleBLE/src",
                 "/Users/christoff/.platformio/packages/framework-arduinoespressif32/libraries/Ticker/src",
@@ -232,7 +236,6 @@
                 "/Users/christoff/.platformio/packages/framework-arduinoespressif32/libraries/WiFi/src",
                 "/Users/christoff/.platformio/packages/framework-arduinoespressif32/libraries/WiFiClientSecure/src",
                 "/Users/christoff/.platformio/packages/framework-arduinoespressif32/libraries/WiFiProv/src",
-                "/Users/christoff/.platformio/packages/framework-arduinoespressif32/libraries/Wire/src",
                 ""
             ],
             "browse": {
@@ -240,6 +243,9 @@
                 "path": [
                     "/Users/christoff/source/repos/personal/pih/pih-esp/include",
                     "/Users/christoff/source/repos/personal/pih/pih-esp/src",
+                    "/Users/christoff/source/repos/personal/pih/pih-esp/.pio/libdeps/firebeetle32/Adafruit DPS310",
+                    "/Users/christoff/source/repos/personal/pih/pih-esp/.pio/libdeps/firebeetle32/Adafruit BusIO",
+                    "/Users/christoff/.platformio/packages/framework-arduinoespressif32/libraries/Wire/src",
                     "/Users/christoff/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/newlib/platform_include",
                     "/Users/christoff/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/freertos/include",
                     "/Users/christoff/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/freertos/include/esp_additions/freertos",
@@ -430,6 +436,8 @@
                     "/Users/christoff/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/dio_qspi/include",
                     "/Users/christoff/.platformio/packages/framework-arduinoespressif32/cores/esp32",
                     "/Users/christoff/.platformio/packages/framework-arduinoespressif32/variants/firebeetle32",
+                    "/Users/christoff/source/repos/personal/pih/pih-esp/.pio/libdeps/firebeetle32/Adafruit Unified Sensor",
+                    "/Users/christoff/.platformio/packages/framework-arduinoespressif32/libraries/SPI/src",
                     "/Users/christoff/.platformio/packages/framework-arduinoespressif32/libraries/ArduinoOTA/src",
                     "/Users/christoff/.platformio/packages/framework-arduinoespressif32/libraries/AsyncUDP/src",
                     "/Users/christoff/.platformio/packages/framework-arduinoespressif32/libraries/BLE/src",
@@ -452,7 +460,6 @@
                     "/Users/christoff/.platformio/packages/framework-arduinoespressif32/libraries/RainMaker/src",
                     "/Users/christoff/.platformio/packages/framework-arduinoespressif32/libraries/SD/src",
                     "/Users/christoff/.platformio/packages/framework-arduinoespressif32/libraries/SD_MMC/src",
-                    "/Users/christoff/.platformio/packages/framework-arduinoespressif32/libraries/SPI/src",
                     "/Users/christoff/.platformio/packages/framework-arduinoespressif32/libraries/SPIFFS/src",
                     "/Users/christoff/.platformio/packages/framework-arduinoespressif32/libraries/SimpleBLE/src",
                     "/Users/christoff/.platformio/packages/framework-arduinoespressif32/libraries/Ticker/src",
@@ -462,7 +469,6 @@
                     "/Users/christoff/.platformio/packages/framework-arduinoespressif32/libraries/WiFi/src",
                     "/Users/christoff/.platformio/packages/framework-arduinoespressif32/libraries/WiFiClientSecure/src",
                     "/Users/christoff/.platformio/packages/framework-arduinoespressif32/libraries/WiFiProv/src",
-                    "/Users/christoff/.platformio/packages/framework-arduinoespressif32/libraries/Wire/src",
                     ""
                 ]
             },
