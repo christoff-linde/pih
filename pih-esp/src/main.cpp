@@ -1,56 +1,68 @@
-// This example gets individual Sensor objects for temperature/pressure!
+#include "WiFi.h"
 
-#include <Adafruit_DPS310.h>
+const char *ssid = "";
+const char *password = "";
 
-Adafruit_DPS310 dps;
-Adafruit_Sensor *dps_temp = dps.getTemperatureSensor();
-Adafruit_Sensor *dps_pressure = dps.getPressureSensor();
+void initWifi()
+{
+  WiFi.mode(WIFI_STA);
+  WiFi.begin(ssid, password);
+  Serial.print("Connecting to WiFi ..");
+  while (WiFi.status() != WL_CONNECTED)
+  {
+    Serial.print(".");
+    delay(1000);
+  }
+  Serial.println(WiFi.localIP());
+}
 
 void setup()
 {
+  delay(100);
   Serial.begin(115200);
-  while (!Serial)
-    delay(10);
 
-  Serial.println("DPS310");
-  if (!dps.begin_I2C())
-  {
-    Serial.println("Failed to find DPS");
-    while (1)
-      yield();
-  }
-  Serial.println("DPS OK!");
+  // Set WiFi to station mode and disconnect from an AP if it was previously connected
+  WiFi.mode(WIFI_STA);
+  WiFi.disconnect();
+  delay(100);
 
-  // Setup highest precision
-  dps.configurePressure(DPS310_64HZ, DPS310_64SAMPLES);
-  dps.configureTemperature(DPS310_64HZ, DPS310_64SAMPLES);
+  initWifi();
 
-  dps_temp->printSensorDetails();
-  dps_pressure->printSensorDetails();
+  Serial.println("Setup done");
 }
 
 void loop()
 {
-  sensors_event_t temp_event, pressure_event;
+  // Serial.println("Scan start");
 
-  if (dps.temperatureAvailable())
-  {
-    dps_temp->getEvent(&temp_event);
-    Serial.print(F("Temperature = "));
-    Serial.print(temp_event.temperature);
-    Serial.println(" *C");
-    Serial.println();
-  }
+  // // WiFi.scanNetworks will return the number of networks found
+  // int numberOfNetworks = WiFi.scanNetworks();
+  // Serial.println("Scan done");
 
-  // Reading pressure also reads temp so don't check pressure
-  // before temp!
-  if (dps.pressureAvailable())
-  {
-    dps_pressure->getEvent(&pressure_event);
-    Serial.print(F("Pressure = "));
-    Serial.print(pressure_event.pressure);
-    Serial.println(" hPa");
+  // if (numberOfNetworks == 0)
+  // {
+  //   Serial.println("No networks found");
+  // }
+  // else
+  // {
+  //   Serial.print(numberOfNetworks);
+  //   Serial.println(" networks found");
+  //   for (int index = 0; index < numberOfNetworks; ++index)
+  //   {
+  //     // Print SSID and RSSI for each network found
+  //     Serial.print(index + 1);
+  //     Serial.print(": ");
+  //     Serial.print(WiFi.SSID(index));
+  //     Serial.print(" (");
+  //     Serial.print(WiFi.RSSI(index));
+  //     Serial.print(")");
+  //     Serial.println(WiFi.encryptionType(index) == WIFI_AUTH_OPEN ? " " : "*");
+  //     delay(10);
+  //   }
+  // }
 
-    Serial.println();
-  }
+  // Serial.println("");
+
+  // // Wait 5 seconds before scanning for the next network
+  // delay(5000);
 }
