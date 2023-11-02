@@ -13,7 +13,8 @@ uint32_t delayMS;
 const char *ssid = "";
 const char *password = "";
 
-const char *serverName = "http://172.31.0.67:8000/update-sensor";
+HTTPClient http;
+String serverName = "http://192.168.0.101:8000/api/client/v1/update-sensor";
 
 void initWifi()
 {
@@ -129,26 +130,33 @@ void loop()
 
   sensors_event_t event;
   dht.temperature().getEvent(&event);
-  if (isnan(event.temperature))
+  float temperature = event.temperature;
+  if (isnan(temperature))
   {
     Serial.println(F("Error reading temperature!"));
   }
   else
   {
     Serial.print(F("Temperature: "));
-    Serial.print(event.temperature);
+    Serial.print(temperature);
     Serial.println(F("°C"));
   }
 
   dht.humidity().getEvent(&event);
-  if (isnan(event.relative_humidity))
+  float humidity = event.relative_humidity;
+  if (isnan(humidity))
   {
     Serial.println(F("Error reading humidity!"));
   }
   else
   {
     Serial.print(F("Humidity: "));
-    Serial.print(event.relative_humidity);
+    Serial.print(humidity);
     Serial.println(F("%"));
   }
+
+  String serverPath = serverName + "?sensor_id=DHT22_01&temperature=" + String(temperature) + "&humidity=" + String(humidity);
+  http.begin(serverPath.c_str());
+
+  int httpResponseCode = http.GET();
 }
