@@ -12,7 +12,7 @@ _A complete rework of the whole system architecture, including but not limited t
 | ----------------------------------------------------------------- | ------------------------------------------------------------------------------ | -------------- |
 | [pih-esp](https://github.com/christoff-linde/pih-esp)             | The firmware/code running on each ESP32 board                                  | In Development |
 | [pih-fastapi](https://github.com/christoff-linde/pih-fastapi)     | A basic FastAPI API for local testing (to be replaced by `pih-rs`)             | Archived       |
-| [pih-rabbit-rs](https://github.com/christoff-linde/pih-rabbit-rs) | A consumer service that reads from RabbitMQ and writes to the DB               | In Development |
+| [pih-mqtt-rs](https://github.com/christoff-linde/pih-mqtt-rs)     | A consumer service that reads from RabbitMQ and writes to the DB               | In Development |
 | [pih-core-rs](https://github.com/christoff-linde/pih-core-rs)     | A webapi service written in Axum for communication from the frontend to the DB | In Development |
 | [pih-rs](https://github.com/christoff-linde/pih-rs)               | A Rust Axum API Client for local testing                                       | Archived       |
 | [pih-terraform](https://github.com/christoff-linde/pih-terraform) | The code to manage/provision AWS resources.                                    | In Development |
